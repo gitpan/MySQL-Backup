@@ -1,9 +1,9 @@
-package Mysql::Backup;
+package MySQL::Backup;
 
 use strict;
 #use Carp(croak);
 use DBI;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new{   #standart constructor
     my ($pkg, $dbname, $dbhost, $dbuser, $dbpass, %param) = @_;
@@ -203,17 +203,17 @@ __END__
 
 =head1 NAME
 
-Mysql::Backup - Perl extension for making backups of mysql DBs.
+MySQL::Backup - Perl extension for making backups of mysql DBs.
 
 =head1 SYNOPSIS
 
-  use Mysql::Backup;
-  my $mb = new Mysql::Backup('perldesk','127.0.0.1','','');
+  use MySQL::Backup;
+  my $mb = new MySQL::Backup('perldesk','127.0.0.1','','');
   print $mb->data_backup;
 
 =head1 DESCRIPTION
 
-Mysql::Backup should be useful for people, who needed in backuping mysql DBs by perl script
+MySQL::Backup should be useful for people, who needed in backuping mysql DBs by perl script
 and doesn't want to use mysqldump or doesn't able to do this.
 
 The main methods are:

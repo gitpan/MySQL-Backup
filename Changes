@@ -4,3 +4,5 @@ Revision history for Perl extension MySQL::Backup.
 	- original version; created by h2xs 1.23 with options
 		-XA -n Mysql::Backup
 
+0.02 Thu Jan 14 02:51:07 2005
+       - small corrections in the code
