@@ -2,5 +2,5 @@ Changes
 Makefile.PL
 MANIFEST
 README
-t/Mysql-Backup.t
-lib/Mysql/Backup.pm
+t/MySQL-Backup.t
+lib/MySQL/Backup.pm

@@ -1,8 +1,8 @@
 # http://module-build.sourceforge.net/META-spec.html
 #XXXXXXX Sorry for small description. I'll make a better info soon. XXXXX#
-name:         Mysql-Backup
+name:         MySQL-Backup
 version:      0.01
-version_from: lib/Mysql/Backup.pm
+version_from: lib/MySQL/Backup.pm
 installdirs:  site
 requires:
     DBI:              0

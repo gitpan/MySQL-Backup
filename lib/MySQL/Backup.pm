@@ -137,7 +137,7 @@ sub get_table_data{
         push @values, $self->{'DBH_OBJ'}->quote($ref->{$keys[$i]});
       }
       my $value_list = join(', ', @values);
-      $data .= "INSERT INTO $table ($key_list) VALUES ($value_list);\n";
+      $data .= "REPLACE INTO $table ($key_list) VALUES ($value_list);\n";
     }
 
     return $data;
@@ -216,30 +216,29 @@ Mysql::Backup - Perl extension for making backups of mysql DBs.
 Mysql::Backup should be useful for people, who needed in backuping mysql DBs by perl script
 and doesn't want to use mysqldump or doesn't able to do this.
 
-=head2 EXPORT
-
-None by default.
-
+The main methods are:
+   $mb->data_backup            - returns a full backup of current database
+   $mb->table_data($tablename) - get all data from the table with $tablename
+   $mb->table_desc($tablename) - get a structure of inputed table
+   $mb->new_from_DBH($dbh)     - if you have already DBI connection, you can use this
+   $mb->create_structure       - returns structure of current database
 
 
 =head1 SEE ALSO
 
-Mention other useful documentation such as the documentation of
-related modules or operating system documentation (such as man pages
-in UNIX), or any relevant external documentation such as RFCs or
-standards.
-
-If you have a mailing list set up for your module, mention it here.
-
-If you have a web site set up for your module, mention it here.
+http://perl.dp.ua
 
 =head1 AUTHOR
 
 Dmitry Nikolayev<lt>dmitry@cpan.org<gt>
 
+=head1 THANKS
+
+Thanks to LogicNOW (http://logicnow.com) company, I am working in, for helping me in working on this module.
+
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2004 by Dmitry Nikolayev
+Copyright (C) 2005 by Dmitry Nikolayev
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.2 or,
