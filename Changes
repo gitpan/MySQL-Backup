@@ -13,3 +13,7 @@ Revision history for Perl extension MySQL::Backup.
        - accepting few additional params, also..
        - added support of MySQL5: problems with reserved words fixed
        - added function for restore and upgrade DB from file
+
+0.04 Wen Sep 17 00:05:39 2007
+       - fixed test on install
+

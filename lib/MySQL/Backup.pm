@@ -3,7 +3,7 @@ package MySQL::Backup;
 use strict;
 
 use DBI;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub new{   #standart constructor
     my ($pkg, $dbname, $dbhost, $dbuser, $dbpass, $param) = @_;
